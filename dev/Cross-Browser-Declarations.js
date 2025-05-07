@@ -92,11 +92,6 @@ var isChrome = (!isOpera && !isEdge && !!navigator.webkitGetUserMedia) || isElec
 
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-if (isSafari && !isChrome && navigator.userAgent.indexOf('CriOS') !== -1) {
-    isSafari = false;
-    isChrome = true;
-}
-
 var MediaStream = window.MediaStream;
 
 if (typeof MediaStream === 'undefined' && typeof webkitMediaStream !== 'undefined') {
