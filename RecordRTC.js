@@ -1,6 +1,6 @@
 'use strict';
 
-// Last time updated: 2024-01-03 12:51:19 PM UTC
+// Last time updated: 2025-05-07 2:58:13 PM UTC
 
 // ________________
 // RecordRTC v5.6.3
@@ -1753,11 +1753,6 @@ var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1 && ('n
 var isChrome = (!isOpera && !isEdge && !!navigator.webkitGetUserMedia) || isElectron() || navigator.userAgent.toLowerCase().indexOf('chrome/') !== -1;
 
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-if (isSafari && !isChrome && navigator.userAgent.indexOf('CriOS') !== -1) {
-    isSafari = false;
-    isChrome = true;
-}
 
 var MediaStream = window.MediaStream;
 
